@@ -1,25 +1,28 @@
 @font-face {
-    font-family: 'ProximaNovaBold';
-    src: url('/fonts/proximanova-bold-webfont.eot');
-    src: url('/fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/proximanova-bold-webfont.woff') format('woff'),
-         url('/fonts/proximanova-bold-webfont.ttf') format('truetype'),
-         url('/fonts/proximanova-bold-webfont.svg#ProximaNovaBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'ProximaNovaBold';
+  src: url('/fonts/proximanova-bold-webfont.eot');
+  src: url('/fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/proximanova-bold-webfont.woff') format('woff'),
+       url('/fonts/proximanova-bold-webfont.ttf') format('truetype'),
+       url('/fonts/proximanova-bold-webfont.svg#ProximaNovaBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'ProximaNovaRegular';
-    src: url('/fonts/proximanova-regular-webfont.eot');
-    src: url('/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/proximanova-regular-webfont.woff') format('woff'),
-         url('/fonts/proximanova-regular-webfont.ttf') format('truetype'),
-         url('/fonts/proximanova-regular-webfont.svg#ProximaNovaRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'ProximaNovaRegular';
+  src: url('/fonts/proximanova-regular-webfont.eot');
+  src: url('/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/proximanova-regular-webfont.woff') format('woff'),
+       url('/fonts/proximanova-regular-webfont.ttf') format('truetype'),
+       url('/fonts/proximanova-regular-webfont.svg#ProximaNovaRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
+html, body {
+  height: 100%
 }
 
 html {
@@ -27,10 +30,10 @@ html {
   background-color: #FFFFFF;
   color: #818D97;
   -webkit-animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -ms-animation: fadein 2s;
-  -o-animation: fadein 2s;
-  animation: fadein 2s;
+     -moz-animation: fadein 2s;
+      -ms-animation: fadein 2s;
+       -o-animation: fadein 2s;
+          animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -78,16 +81,14 @@ h1 {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-top: 200px;
-  margin-right: auto;
-  margin-left: auto;
+  position: relative;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0 15px;
+  margin: 0 auto;
   max-width: 450px;
-}
-
-@media (max-width: 768px){
-  .container {
-    margin-top: 0;
-  }
 }
