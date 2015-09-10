@@ -1,4 +1,4 @@
-kirbyk.me
+kirby.xyz
 =========
 
 Yeah, this is my site.
