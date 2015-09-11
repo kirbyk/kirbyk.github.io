@@ -1,0 +1,18 @@
+{
+  "name": "kirbyk.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kirbyk/kirbyk.github.io",
+  "authors": [
+    "Kirby Kohlmorgen <kirby@kkohlmorgen.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}

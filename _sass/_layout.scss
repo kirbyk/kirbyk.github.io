@@ -1,0 +1,32 @@
+html, body {
+  height: 100%
+}
+
+html {
+  font-family: "ProximaNovaRegular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: $base-font-size;
+  background-color: $background-color;
+  color: $grey-color-light;
+}
+
+a {
+  color: $grey-color-dark;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: $brand-color;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  color: $grey-color-dark;
+  font-size: 1.7em;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 450px;
+}

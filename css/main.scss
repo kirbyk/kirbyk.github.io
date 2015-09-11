@@ -1,0 +1,29 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+$base-font-family: "ProximaNovaRegular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$base-font-size:   1.2em;
+
+$background-color: #FFFFFF;
+$brand-color:      #8FACC0;
+
+$grey-color-light: #818D97;
+$grey-color-dark:  #484D51;
+
+@mixin browser-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+       -o-#{$property}: #{$value};
+          #{$property}: #{$value};
+}
+
+@import
+  "../bower_components/normalize-css/normalize.css",
+  "fonts",
+  "layout",
+  "home"
+;
