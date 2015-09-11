@@ -13,6 +13,11 @@ $brand-color:      #8FACC0;
 $grey-color-light: #818D97;
 $grey-color-dark:  #484D51;
 
+$nav-height: 20em;
+$nav-text-color: #FFFFFF;
+$nav-padding: 30px;
+
+$big-container-width: 1140px;
 $container-width: 580px;
 $container-padding: 0 15px;
 
@@ -30,5 +35,6 @@ $post-line-height: 1.5em;
   "../bower_components/normalize-css/normalize.css",
   "fonts",
   "layout",
-  "home"
+  "home",
+  "post"
 ;

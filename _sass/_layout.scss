@@ -24,6 +24,12 @@ h1 {
   font-size: $base-font-size * 1.5;
 }
 
+.big-container {
+  margin: 0 auto;
+  padding: $container-padding;
+  max-width: $big-container-width;
+}
+
 .container {
   margin: 0 auto;
   padding: $container-padding;

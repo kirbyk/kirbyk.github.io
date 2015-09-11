@@ -56,6 +56,11 @@ h1, h2, h3 {
 h1 {
   font-size: 1.8em; }
 
+.big-container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1140px; }
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -118,7 +123,8 @@ a:hover > .post-title {
   color: #8FACC0; }
 
 a > .post, a:hover > .post {
-  color: #818D97; }
+  color: #818D97;
+  font-weight: normal; }
 
 .post-divider {
   opacity: 0.2;
@@ -126,3 +132,16 @@ a > .post, a:hover > .post {
 
 .post-wrapper:last-child .post-divider {
   display: none; }
+
+.post-header-nav {
+  height: 20em;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 4em; }
+
+.nav-header-title {
+  color: #FFFFFF;
+  margin: 0;
+  padding: 30px;
+  letter-spacing: 1px;
+  font-size: 1.5em; }
