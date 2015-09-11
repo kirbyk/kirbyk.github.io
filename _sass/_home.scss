@@ -1,8 +1,5 @@
 .homepage-wrapper {
-  position: relative;
-  top: 40%;
   @include browser-prefix(animation, fadein 2s);
-  @include browser-prefix(transform, translateY(-50%));
 }
 
 @keyframes fadein {
@@ -30,3 +27,37 @@
   to   { opacity: 1; }
 }
 
+.home-header {
+  display: table;
+  height: 100vh;
+}
+
+.home-header-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.home-main {
+  padding: 50px 0;
+}
+
+.post {
+  line-height: $post-line-height;
+}
+
+a:hover > .post-title {
+  color: $brand-color;
+}
+
+a > .post, a:hover > .post {
+  color: $grey-color-light;
+}
+
+.post-divider {
+  opacity: 0.2;
+  margin-top: 1.17em;
+}
+
+.post-wrapper:last-child .post-divider {
+  display: none;
+}

@@ -35,9 +35,6 @@
   src: url("/fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/proximanova-regular-webfont.woff") format("woff"), url("/fonts/proximanova-regular-webfont.ttf") format("truetype"), url("/fonts/proximanova-regular-webfont.svg#ProximaNovaRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
-html, body {
-  height: 100%; }
-
 html {
   font-family: "ProximaNovaRegular", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.2em;
@@ -52,29 +49,31 @@ a {
 a:hover {
   color: #8FACC0; }
 
-h1 {
+h1, h2, h3 {
   font-family: 'Merriweather', serif;
-  color: #484D51;
-  font-size: 1.7em; }
+  color: #484D51; }
+
+h1 {
+  font-size: 1.8em; }
 
 .container {
-  padding: 0 15px;
   margin: 0 auto;
-  max-width: 450px; }
+  padding: 0 15px;
+  max-width: 580px; }
+
+.divider {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  opacity: .2; }
 
 .homepage-wrapper {
-  position: relative;
-  top: 40%;
   -webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
   -ms-animation: fadein 2s;
   -o-animation: fadein 2s;
-  animation: fadein 2s;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  animation: fadein 2s; }
 
 @keyframes fadein {
   from {
@@ -101,3 +100,29 @@ h1 {
     opacity: 0; }
   to {
     opacity: 1; } }
+.home-header {
+  display: table;
+  height: 100vh; }
+
+.home-header-content {
+  display: table-cell;
+  vertical-align: middle; }
+
+.home-main {
+  padding: 50px 0; }
+
+.post {
+  line-height: 1.5em; }
+
+a:hover > .post-title {
+  color: #8FACC0; }
+
+a > .post, a:hover > .post {
+  color: #818D97; }
+
+.post-divider {
+  opacity: 0.2;
+  margin-top: 1.17em; }
+
+.post-wrapper:last-child .post-divider {
+  display: none; }

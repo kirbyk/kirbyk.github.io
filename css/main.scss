@@ -13,6 +13,11 @@ $brand-color:      #8FACC0;
 $grey-color-light: #818D97;
 $grey-color-dark:  #484D51;
 
+$container-width: 580px;
+$container-padding: 0 15px;
+
+$post-line-height: 1.5em;
+
 @mixin browser-prefix($property, $value) {
   -webkit-#{$property}: #{$value};
      -moz-#{$property}: #{$value};
