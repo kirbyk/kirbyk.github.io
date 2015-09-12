@@ -45,6 +45,10 @@
   line-height: $post-line-height;
 }
 
+.post p {
+  margin-bottom: 1.75em;
+}
+
 a:hover > .post-title {
   color: $brand-color;
 }

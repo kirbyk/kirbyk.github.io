@@ -119,6 +119,9 @@ h1 {
 .post {
   line-height: 1.5em; }
 
+.post p {
+  margin-bottom: 1.75em; }
+
 a:hover > .post-title {
   color: #8FACC0; }
 
