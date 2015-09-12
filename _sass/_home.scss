@@ -1,0 +1,68 @@
+.homepage-wrapper {
+  @include browser-prefix(animation, fadein 2s);
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.home-header {
+  display: table;
+  height: 100vh;
+}
+
+.home-header-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.home-main {
+  padding: 50px 0;
+}
+
+.post {
+  line-height: $post-line-height;
+}
+
+.post p {
+  margin-bottom: 1.75em;
+}
+
+a:hover > .post-title {
+  color: $brand-color;
+}
+
+a > .post, a:hover > .post {
+  color: $grey-color-light;
+  font-weight: normal;
+}
+
+.post-divider {
+  opacity: 0.2;
+  margin-top: 1.17em;
+}
+
+.post-wrapper:last-child .post-divider {
+  display: none;
+}

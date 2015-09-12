@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>Domain registrars, DNS, and hosting</title>
+  <meta name='description' content='It took me a while to setup the infrastructure that runs my website and email ina way that made me happy. There are a lot of crappy domain registrars, DNSpro...'>
+
+  <link rel='stylesheet' href='/css/pygments.css'>
+  <link rel='stylesheet' href='/css/main.css'>
+  <link rel='canonical' href="http://kirby.xyz/domain-registrars-dns-and-hosting">
+  <link rel='alternate' type='application/rss+xml' title='kirby.xyz' href='http://kirby.xyz/feed.xml' />
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-67430314-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+  <nav class='post-header-nav' style='background-image: url(/img/telephones.jpg);'>
+  <div class='big-container'>
+    <a href='/'><h1 class='nav-header-title'>kirby.xyz</h1></a>
+  </div>
+</nav>
+
+<div class='container'>
+  <div class='post'>
+    <h2 class='post-title'>Domain registrars, DNS, and hosting</h2>
+
+    <article>
+      <p>It took me a while to setup the infrastructure that runs my website and email in
+a way that made me happy. There are a lot of crappy domain registrars, DNS
+providers, and web hosts out there. I’m finally in a place where I’m pleased
+with each component in my pipeline, so I thought I’d share my setup with the
+world.</p>
+
+<h3 id="namecheap">Namecheap</h3>
+
+<p>Back in the day I, like many other people, used GoDaddy as my primary domain
+registrar. Quickly I learned that GoDaddy spends all of their money on
+<a href="http://fortune.com/2015/03/30/godaddy-ads-ipo/">fancy advertising</a> instead of hiring UX engineers or product managers.
+Their support team was subpar aswell during my time their.</p>
+
+<p>Nowadays I only use <a href="http://www.namecheap.com/?aff=90584">Namecheap</a> for my domain needs. Namecheap as by
+far the best interface I’ve found for managing domains, and it gets better
+everytime I use it. They also always have great deals on <a href="https://www.namecheap.com/domains/new-tlds/explore.aspx?aff=90584">new TLDs</a>, and
+searching for a great domain on their site is always a fantastic experience.</p>
+
+<h3 id="cloudflare">CloudFlare</h3>
+
+<p>Every domain registrar will provide you with the ability to configure your DNS
+settings for your domain, but no free nameserver service can really compare to
+<a href="https://www.cloudflare.com/">CloudFlare</a>. I don’t want to take too much time explaining all of
+the amazing things that CloudFlare can do for you, because <a href="https://vimeo.com/14700285">this video</a>
+already does an incredible job.</p>
+
+<p>If you watched that video, then you know about a lot of the awesome features
+that CloudFlare provides to its users for free. My absolutely favorite feature
+though is surprisingly unemphazied on CloudFlare’s site. The number one reason
+I use CloudFlare is because <a href="https://blog.cloudflare.com/never-deal-with-dns-propagation-again/">I never have to wait on DNS propagation</a>.</p>
+
+<h3 id="github-pages">GitHub Pages</h3>
+
+<p>Hosting a website can also be quite a pain. If you just need to host a static
+website, then there is <a href="https://google.com/search?q=free+static+website+hosting">no reason</a> you need to pay for hosting. My
+personal favorite solution is <a href="https://pages.github.com/">GitHub Pages</a>. I already use <code>git</code> to
+manage my website, so GitHub Pages makes updating my website as easy as <code>git push</code>.
+No more FTP, SSH, or any other three letter acroynms.</p>
+
+<h3 id="setting-it-up">Setting it up</h3>
+
+<p>By now you should have a good high-level overview of how to setup your website,
+but there can be small implementation details that still make connecting the
+dots difficult. Here are all the steps you need to follow in order to utilize
+the above services:</p>
+
+<h4 id="get-your-domain-on-namecheap">Get your domain on Namecheap.</h4>
+
+<p>It doesn’t matter if you buy it directly or transfer it, but get your domain on
+Namecheap.</p>
+
+<h4 id="add-your-site-to-cloudflare">Add your site to CloudFlare.</h4>
+
+<p>On CloudFlare add your site, scan the current DNS records, and select the free
+plan. Once you’ve done that you’ll be prompted with two nameserver addresses.
+Save these for the next step.</p>
+
+<h4 id="point-namecheap-to-cloudflare">Point Namecheap to CloudFlare.</h4>
+
+<p>Go back to Namecheap, click ‘Manage Domains’ from the dropdown on the top-left,
+select your domain, and then click ‘Transfer DNS to Webhost’. From here enter
+the two nameservers you got from CloudFlare and click save.</p>
+
+<h4 id="check-the-nameservers">Check the nameservers.</h4>
+
+<p>Awesome, now go back to your site on CloudFlare and click ‘Recheck Nameservers’,
+this can take up to 24 hours, but often (especially with Namecheap) it on takes
+a few minutes.</p>
+
+<h4 id="setup-github-pages">Setup GitHub Pages.</h4>
+
+<p>Head over GitHub and create a <a href="https://github.com/new">new repo</a> called <em>username</em>.github.io,
+where username is your username on GitHub. From here you can push your static
+website up with the following commands:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># from your website directory on your local machine</span>
+<span class="nv">$ </span>git init
+<span class="nv">$ </span>git add .
+<span class="nv">$ </span>git commit -m <span class="s1">&#39;Initial commit&#39;</span>
+<span class="nv">$ </span>git remote add origin &lt;your-remote-url&gt; <span class="c"># replace &#39;&lt;your-remote-url&gt;&#39; with the one you get from your repo page on GitHub</span>
+<span class="nv">$ </span>git push -u origin master</code></pre></div>
+
+<p>If you don’t want spend time messing with <code>git</code>, then you can click ‘Settings’
+on the right-hand side of your repo, and then click ‘Launch automatic page
+generator’ to setup a beatiful one page website.</p>
+
+<h4 id="point-your-dns-to-github-pages">Point your DNS to GitHub Pages.</h4>
+
+<p>You can now got back to your site on CloudFlare and click ‘DNS’ at the top. From
+here you’re going to want to add a CNAME record. The first value (name) will be
+‘@’, and the second value (domain name) will be <em>username</em>.github.io, where
+username is your username on GitHub.</p>
+
+<p>Unless you have some subdomains or other special circumstances you can delete
+any other CNAME or A records off of CloudFlare. Just to be safe though, I’d
+suggest you backup your DNS records by clicking, ‘Advanced’ and ‘Export.’</p>
+
+<p>I personally don’t like the ‘www’ that prefixes a lot of domains. I get rid of
+this by adding another CNAME record with first value ‘www’ and second value 
+<em>username</em>.github.io, where username is your username on GitHub.</p>
+
+<h4 id="add-a-cname-file-on-github">Add a CNAME file on GitHub.</h4>
+
+<p>The last step in this process is to tell GitHub Pages about our domain. We do
+this by adding a file called ‘CNAME’ to the root directory of our website’s
+repository on GitHub. To do this run the following commands:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># from your website directory on your local machine</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;&lt;your-domain&gt;&#39;</span> &gt;&gt; CNAME <span class="c"># where &#39;&lt;your-domain&gt;&#39; is your domain</span>
+<span class="nv">$ </span>git add CNAME
+<span class="nv">$ </span>git commit -m <span class="s1">&#39;Add CNAME&#39;</span>
+<span class="nv">$ </span>git push origin master</code></pre></div>
+
+
+    </article>
+  </div>
+</div>
+
+</body>
+</html>

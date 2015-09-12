@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), url('/fonts/merriweather-regular-webfont.woff') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), url('/fonts/merriweather-regular-webfont-latin.woff') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Merriweather Heavy'), local('Merriweather-Heavy'), url('/fonts/merriweather-heavy-webfont.woff') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Merriweather Heavy'), local('Merriweather-Heavy'), url('/fonts/merriweather-heavy-webfont-latin.woff') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url('/fonts/proximanova-bold-webfont.eot');
+  src: url('/fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/proximanova-bold-webfont.woff') format('woff'),
+       url('/fonts/proximanova-bold-webfont.ttf') format('truetype'),
+       url('/fonts/proximanova-bold-webfont.svg#ProximaNovaBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url('/fonts/proximanova-regular-webfont.eot');
+  src: url('/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/proximanova-regular-webfont.woff') format('woff'),
+       url('/fonts/proximanova-regular-webfont.ttf') format('truetype'),
+       url('/fonts/proximanova-regular-webfont.svg#ProximaNovaRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
