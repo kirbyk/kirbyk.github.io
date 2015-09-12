@@ -6,3 +6,4 @@ url: "http://kirby.xyz" # the base hostname & protocol for your site
 permalink: "/:title"
 
 markdown: kramdown
+highlighter: pygments
