@@ -16,9 +16,9 @@ world.
 Back in the day I, like many other people, used GoDaddy as my primary domain
 registrar. Quickly I learned that GoDaddy spends all of their money on
 [fancy advertising][godaddy] instead of hiring UX engineers or product managers.
-Their support team was subpar aswell during my time their.
+Their support team was subpar as well during my time there.
 
-Nowadays I only use [Namecheap][namecheap] for my domain needs. Namecheap as by
+Nowadays I only use [Namecheap][namecheap] for my domain needs. Namecheap is by
 far the best interface I've found for managing domains, and it gets better
 everytime I use it. They also always have great deals on [new TLDs][tlds], and
 searching for a great domain on their site is always a fantastic experience.
@@ -71,12 +71,12 @@ the two nameservers you got from CloudFlare and click save.
 #### Check the nameservers.
 
 Awesome, now go back to your site on CloudFlare and click 'Recheck Nameservers',
-this can take up to 24 hours, but often (especially with Namecheap) it on takes
-a few minutes.
+this can take up to 24 hours, but often (especially with Namecheap) it only
+takes a few minutes.
 
 #### Setup GitHub Pages.
 
-Head over GitHub and create a [new repo][repo] called *username*.github.io,
+Head over to GitHub and create a [new repo][repo] called *username*.github.io,
 where username is your username on GitHub. From here you can push your static
 website up with the following commands:
 
@@ -89,9 +89,9 @@ $ git remote add origin <your-remote-url> # replace '<your-remote-url>' with the
 $ git push -u origin master
 {% endhighlight %}
 
-If you don't want spend time messing with `git`, then you can click 'Settings'
+If you don't want to spend time messing with `git`, then you can click 'Settings'
 on the right-hand side of your repo, and then click 'Launch automatic page
-generator' to setup a beatiful one page website.
+generator' to setup a beautiful one page website.
 
 #### Point your DNS to GitHub Pages.
 
