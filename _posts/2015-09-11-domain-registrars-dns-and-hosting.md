@@ -5,7 +5,7 @@ date:   2015-09-11 18:53:06
 categories: domain DNS hosting
 cover: /img/telephones.jpg
 ---
-It took me a while to setup the infrastructure that runs my website and email in
+It took me a while to set up the infrastructure that runs my website and email in
 a way that made me happy. There are a lot of crappy domain registrars, DNS
 providers, and web hosts out there. I'm finally in a place where I'm pleased
 with each component in my pipeline, so I thought I'd share my setup with the
