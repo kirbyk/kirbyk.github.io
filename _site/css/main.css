@@ -154,9 +154,9 @@ a > .post, a:hover > .post {
   margin-bottom: 4em; }
 
 .nav-header-title {
+  display: inline-block;
   color: #FFFFFF;
-  margin: 0;
-  padding: 30px;
+  margin: 30px;
   letter-spacing: 1px;
   font-size: 1.5em; }
 
