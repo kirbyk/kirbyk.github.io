@@ -51,30 +51,30 @@ but there can be small implementation details that still make connecting the
 dots difficult. Here are all the steps you need to follow in order to utilize
 the above services:
 
-#### Get your domain on Namecheap.
+#### 1. Get your domain on Namecheap.
 
 It doesn't matter if you buy it directly or transfer it, but get your domain on
 Namecheap.
 
-#### Add your site to CloudFlare.
+#### 2. Add your site to CloudFlare.
 
 On CloudFlare add your site, scan the current DNS records, and select the free
 plan. Once you've done that you'll be prompted with two nameserver addresses.
 Save these for the next step.
 
-#### Point Namecheap to CloudFlare.
+#### 3. Point Namecheap to CloudFlare.
 
 Go back to Namecheap, click 'Manage Domains' from the dropdown on the top-left,
 select your domain, and then click 'Transfer DNS to Webhost'. From here enter
 the two nameservers you got from CloudFlare and click save.
 
-#### Check the nameservers.
+#### 4. Check the nameservers.
 
 Awesome, now go back to your site on CloudFlare and click 'Recheck Nameservers',
 this can take up to 24 hours, but often (especially with Namecheap) it only
 takes a few minutes.
 
-#### Setup GitHub Pages.
+#### 5. Setup GitHub Pages.
 
 Head over to GitHub and create a [new repo][repo] called *username*.github.io,
 where username is your username on GitHub. From here you can push your static
@@ -93,7 +93,7 @@ If you don't want to spend time messing with `git`, then you can click 'Settings
 on the right-hand side of your repo, and then click 'Launch automatic page
 generator' to setup a beautiful one page website.
 
-#### Point your DNS to GitHub Pages.
+#### 6. Point your DNS to GitHub Pages.
 
 You can now got back to your site on CloudFlare and click 'DNS' at the top. From
 here you're going to want to add a CNAME record. The first value (name) will be
@@ -108,7 +108,7 @@ I personally don't like the 'www' that prefixes a lot of domains. I get rid of
 this by adding another CNAME record with first value 'www' and second value 
 *username*.github.io, where username is your username on GitHub.
 
-#### Add a CNAME file on GitHub.
+#### 7. Add a CNAME file on GitHub.
 
 The last step in this process is to tell GitHub Pages about our domain. We do
 this by adding a file called 'CNAME' to the root directory of our website's
