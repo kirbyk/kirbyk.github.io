@@ -49,9 +49,9 @@ registrar. Quickly I learned that GoDaddy spends all of their money on
 <a href="http://fortune.com/2015/03/30/godaddy-ads-ipo/">fancy advertising</a> instead of hiring UX engineers or product managers.
 Their support team was subpar as well during my time there.</p>
 
-<p>Nowadays I only use <a href="http://www.namecheap.com/?aff=90584">Namecheap</a> for my domain needs. Namecheap is by
-far the best interface I’ve found for managing domains, and it gets better
-everytime I use it. They also always have great deals on <a href="https://www.namecheap.com/domains/new-tlds/explore.aspx?aff=90584">new TLDs</a>, and
+<p>Nowadays, I only use <a href="http://www.namecheap.com/?aff=90584">Namecheap</a> for my domain needs. Namecheap is by
+far the best interface I’ve found for managing domains and it gets better
+everytime I use it. They also always have great deals on <a href="https://www.namecheap.com/domains/new-tlds/explore.aspx?aff=90584">new TLDs</a> and
 searching for a great domain on their site is always a fantastic experience.</p>
 
 <h3 id="cloudflare">CloudFlare</h3>
@@ -59,12 +59,12 @@ searching for a great domain on their site is always a fantastic experience.</p>
 <p>Every domain registrar will provide you with the ability to configure your DNS
 settings for your domain, but no free nameserver service can really compare to
 <a href="https://www.cloudflare.com/">CloudFlare</a>. I don’t want to take too much time explaining all of
-the amazing things that CloudFlare can do for you, because <a href="https://vimeo.com/14700285">this video</a>
+the amazing things that CloudFlare can do for you because <a href="https://vimeo.com/14700285">this video</a>
 already does an incredible job.</p>
 
 <p>If you watched that video, then you know about a lot of the awesome features
 that CloudFlare provides to its users for free. My absolutely favorite feature
-though is surprisingly unemphazied on CloudFlare’s site. The number one reason
+though, is surprisingly unemphazied on CloudFlare’s site. The number one reason
 I use CloudFlare is because <a href="https://blog.cloudflare.com/never-deal-with-dns-propagation-again/">I never have to wait on DNS propagation</a>.</p>
 
 <h3 id="github-pages">GitHub Pages</h3>
@@ -90,19 +90,19 @@ Namecheap.</p>
 <h4 id="add-your-site-to-cloudflare">2. Add your site to CloudFlare.</h4>
 
 <p>On CloudFlare add your site, scan the current DNS records, and select the free
-plan. Once you’ve done that you’ll be prompted with two nameserver addresses.
+plan. Once you’ve done that, you’ll be prompted with two nameserver addresses.
 Save these for the next step.</p>
 
 <h4 id="point-namecheap-to-cloudflare">3. Point Namecheap to CloudFlare.</h4>
 
-<p>Go back to Namecheap, click ‘Manage Domains’ from the dropdown on the top-left,
-select your domain, and then click ‘Transfer DNS to Webhost’. From here enter
+<p>Go back to Namecheap, click “Manage Domains” from the dropdown on the top-left,
+select your domain, and then click “Transfer DNS to Webhost.” From here, enter
 the two nameservers you got from CloudFlare and click save.</p>
 
 <h4 id="check-the-nameservers">4. Check the nameservers.</h4>
 
-<p>Awesome, now go back to your site on CloudFlare and click ‘Recheck Nameservers’,
-this can take up to 24 hours, but often (especially with Namecheap) it only
+<p>Awesome, now go back to your site on CloudFlare and click “Recheck Nameservers.”
+This can take up to 24 hours, but often (especially with Namecheap) it only
 takes a few minutes.</p>
 
 <h4 id="setup-github-pages">5. Setup GitHub Pages.</h4>
@@ -115,36 +115,36 @@ website up with the following commands:</p>
 <span class="nv">$ </span>git init
 <span class="nv">$ </span>git add .
 <span class="nv">$ </span>git commit -m <span class="s1">&#39;Initial commit&#39;</span>
-<span class="nv">$ </span>git remote add origin &lt;your-remote-url&gt; <span class="c"># replace &#39;&lt;your-remote-url&gt;&#39; with the one you get from your repo page on GitHub</span>
+<span class="nv">$ </span>git remote add origin &lt;your-remote-url&gt; <span class="c"># replace &quot;&lt;your-remote-url&gt;&quot; with the one you get from your repo page on GitHub</span>
 <span class="nv">$ </span>git push -u origin master</code></pre></div>
 
-<p>If you don’t want to spend time messing with <code>git</code>, then you can click ‘Settings’
-on the right-hand side of your repo, and then click ‘Launch automatic page
-generator’ to setup a beautiful one page website.</p>
+<p>If you don’t want to spend time messing with <code>git</code>, then you can click “Settings”
+on the right-hand side of your repo and then click “Launch automatic page
+generator” to setup a beautiful one page website.</p>
 
 <h4 id="point-your-dns-to-github-pages">6. Point your DNS to GitHub Pages.</h4>
 
-<p>You can now got back to your site on CloudFlare and click ‘DNS’ at the top. From
+<p>You can now go back to your site on CloudFlare and click “DNS” at the top. From
 here you’re going to want to add a CNAME record. The first value (name) will be
-‘@’, and the second value (domain name) will be <em>username</em>.github.io, where
+“@” and the second value (domain name) will be <em>username</em>.github.io, where
 username is your username on GitHub.</p>
 
-<p>Unless you have some subdomains or other special circumstances you can delete
+<p>Unless you have some subdomains or other special circumstances, you can delete
 any other CNAME or A records off of CloudFlare. Just to be safe though, I’d
-suggest you backup your DNS records by clicking, ‘Advanced’ and ‘Export.’</p>
+suggest you backup your DNS records by clicking, “Advanced” and “Export.”</p>
 
-<p>I personally don’t like the ‘www’ that prefixes a lot of domains. I get rid of
-this by adding another CNAME record with first value ‘www’ and second value 
+<p>I personally don’t like the “www” that prefixes a lot of domains. I get rid of
+this by adding another CNAME record with first value “www” and second value 
 <em>username</em>.github.io, where username is your username on GitHub.</p>
 
 <h4 id="add-a-cname-file-on-github">7. Add a CNAME file on GitHub.</h4>
 
 <p>The last step in this process is to tell GitHub Pages about our domain. We do
-this by adding a file called ‘CNAME’ to the root directory of our website’s
+this by adding a file called “CNAME” to the root directory of our website’s
 repository on GitHub. To do this run the following commands:</p>
 
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># from your website directory on your local machine</span>
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">&#39;&lt;your-domain&gt;&#39;</span> &gt;&gt; CNAME <span class="c"># where &#39;&lt;your-domain&gt;&#39; is your domain</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;&lt;your-domain&gt;&quot;</span> &gt;&gt; CNAME <span class="c"># where &quot;&lt;your-domain&gt;&quot; is your domain</span>
 <span class="nv">$ </span>git add CNAME
 <span class="nv">$ </span>git commit -m <span class="s1">&#39;Add CNAME&#39;</span>
 <span class="nv">$ </span>git push origin master</code></pre></div>
