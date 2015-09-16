@@ -11,7 +11,6 @@ $('.arrow').click(function() {
   $('html, body').animate({
       scrollTop: $(".home-main").offset().top
     }, 700);
-  clearInterval(bouncyArrow);
   return false;
 });
 
