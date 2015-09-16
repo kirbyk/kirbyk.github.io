@@ -1,5 +1,5 @@
 .homepage-wrapper {
-  @include browser-prefix(animation, fadein 2s);
+  @include browser-prefix(animation, fadein $home-fadein-speed);
 }
 
 @keyframes fadein {
@@ -70,7 +70,7 @@
 }
 
 .home-main {
-  padding: 50px 0;
+  padding: $home-padding 0;
 }
 
 .post {
@@ -78,7 +78,7 @@
 }
 
 .post p {
-  margin-bottom: 1.75em;
+  margin-bottom: $post-paragraph-after;
 }
 
 a:hover > .post-title {
@@ -91,8 +91,8 @@ a > .post, a:hover > .post {
 }
 
 .post-divider {
-  opacity: 0.2;
-  margin-top: 1.17em;
+  opacity: $divider-opacity;
+  margin-top: $post-divider-margin;
 }
 
 .post-wrapper:last-child .post-divider {

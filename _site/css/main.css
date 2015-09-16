@@ -69,12 +69,12 @@ pre > code {
 
 .big-container {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1em;
   max-width: 1140px; }
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1em;
   max-width: 580px; }
 
 .divider {
@@ -82,8 +82,7 @@ pre > code {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0;
-  opacity: .2; }
+  border-bottom: 0.1em solid rgba(0, 0, 0, 0.2); }
 
 .homepage-wrapper {
   -webkit-animation: fadein 2s;
@@ -133,8 +132,8 @@ pre > code {
   bottom: 3em;
   position: absolute;
   left: 50%;
-  width: 200px;
-  margin-left: -100px; }
+  width: 10em;
+  margin-left: -5em; }
   @media (max-width: 480px) {
     .arrow {
       bottom: 1.5em; } }
@@ -158,7 +157,7 @@ pre > code {
   border-color: #8FACC0; }
 
 .home-main {
-  padding: 50px 0; }
+  padding: 2em 0; }
 
 .post {
   line-height: 1.5em; }
@@ -194,21 +193,21 @@ a > .post, a:hover > .post {
   display: inline-block;
   color: #FFFFFF;
   margin: 1em;
-  letter-spacing: 1px;
+  letter-spacing: 0.04em;
   font-size: 1.5em; }
   @media (max-width: 480px) {
     .nav-header-title {
       margin: 0.5em; } }
 
 .post-footer {
-  margin-top: 30px;
-  padding: 30px 0 4em;
-  border-top: solid 1px rgba(0, 0, 0, 0.2); }
+  margin-top: 2em;
+  padding: 2em 0 4em;
+  border-top: solid 0.1em rgba(0, 0, 0, 0.2); }
 
 .post-author {
   margin: 0; }
 
 .small-bio {
-  font-size: .9em;
-  margin-top: 10px;
+  font-size: 0.9em;
+  margin-top: 0.66667em;
   line-height: 1.5em; }
