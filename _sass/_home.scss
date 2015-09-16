@@ -49,8 +49,8 @@
   display: block;
   height: $arrow-size;
   width: $arrow-size;
-  border-left: $arrow-width solid #000;
-  border-bottom: $arrow-width solid #000;
+  border-left: $arrow-width solid $grey-color-dark;
+  border-bottom: $arrow-width solid $grey-color-dark;
   margin: 0 auto;
   margin-top: $arrow-offset;
   @include browser-prefix(transform, rotate(-45deg));

@@ -13,6 +13,7 @@
     "tests"
   ],
   "dependencies": {
+    "animate.css": "animate-css#~3.4.0",
     "jquery": "~2.1.4",
     "normalize-css": "normalize.css#~3.0.3"
   }
