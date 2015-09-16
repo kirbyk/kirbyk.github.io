@@ -2,15 +2,24 @@
   height: $nav-height;
   background-size: cover;
   background-position: center center;
-  margin-bottom: 4em;
+  margin-bottom: $nav-padding;
+
+  @include phone {
+    height: $nav-height / 2;
+    margin-bottom: $nav-padding / 2;
+  }
 }
 
 .nav-header-title {
   display: inline-block;
   color: $nav-text-color;
-  margin: $nav-margin;
+  margin: $nav-title-margin;
   letter-spacing: 1px;
   font-size: 1.5em;
+
+  @include phone {
+    margin: $nav-title-margin / 2;
+  }
 }
 
 .post-footer {
