@@ -21,4 +21,4 @@ $(window).scroll(function() {
 
 var bouncyArrow = setInterval(function() {
   $('.arrow').toggleClass('animated bounce');
-}, 1000);
+}, 5000);
