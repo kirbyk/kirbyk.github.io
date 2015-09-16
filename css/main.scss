@@ -21,6 +21,10 @@ $big-container-width: 1140px;
 $container-width: 580px;
 $container-padding: 0 15px;
 
+$arrow-padding: 8em;
+$arrow-height: .25em;
+$arrow-offset: 3em;
+
 $post-line-height: 1.5em;
 
 @mixin browser-prefix($property, $value) {

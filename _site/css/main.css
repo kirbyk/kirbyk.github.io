@@ -124,6 +124,43 @@ pre > code {
   display: table-cell;
   vertical-align: middle; }
 
+#arrow {
+  display: block;
+  text-align: center;
+  position: relative;
+  bottom: 8em; }
+
+#arrow:before {
+  content: "";
+  display: block;
+  height: 0.25em;
+  width: 1em;
+  background-color: black;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: relative;
+  margin: 0 auto;
+  top: 3em; }
+
+#arrow:after {
+  content: "";
+  display: block;
+  height: 0.25em;
+  width: 1em;
+  background-color: black;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: relative;
+  margin: 0 auto;
+  top: 1.75em;
+  left: 0.375em; }
+
 .home-main {
   padding: 50px 0; }
 
