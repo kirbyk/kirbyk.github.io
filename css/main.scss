@@ -21,9 +21,10 @@ $big-container-width: 1140px;
 $container-width: 580px;
 $container-padding: 0 15px;
 
-$arrow-padding: 8em;
+$arrow-padding: 3em;
 $arrow-size: 1em;
-$arrow-width: .5em;
+$arrow-width: 200px;
+$arrow-thickness: .5em;
 $arrow-offset: .7em;
 
 $post-line-height: 1.5em;
@@ -34,6 +35,14 @@ $post-line-height: 1.5em;
       -ms-#{$property}: #{$value};
        -o-#{$property}: #{$value};
           #{$property}: #{$value};
+}
+
+$phone-width: 480px;
+
+@mixin phone {
+  @media (max-width: #{$phone-width}) {
+    @content;
+  }
 }
 
 @import

@@ -81,6 +81,7 @@ pre > code {
   position: absolute;
   left: 0;
   right: 0;
+  bottom: 0;
   margin: 0;
   opacity: .2; }
 
@@ -122,13 +123,21 @@ pre > code {
 
 .home-header-content {
   display: table-cell;
-  vertical-align: middle; }
+  vertical-align: middle;
+  position: relative;
+  bottom: 3em; }
 
 .arrow {
   display: block;
   text-align: center;
-  position: relative;
-  bottom: 8em; }
+  bottom: 3em;
+  position: absolute;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px; }
+  @media (max-width: 480px) {
+    .arrow {
+      bottom: 1.5em; } }
 
 .arrow:after {
   content: "";

@@ -35,13 +35,22 @@
 .home-header-content {
   display: table-cell;
   vertical-align: middle;
+  position: relative;
+  bottom: $arrow-padding;
 }
 
 .arrow {
   display: block;
   text-align: center;
-  position: relative;
   bottom: $arrow-padding;
+  position: absolute;
+  left: 50%;
+  width: $arrow-width;
+  margin-left: $arrow-width / -2;
+
+  @include phone {
+    bottom: $arrow-padding / 2;
+  }
 }
 
 .arrow:after {
@@ -49,8 +58,8 @@
   display: block;
   height: $arrow-size;
   width: $arrow-size;
-  border-left: $arrow-width solid $grey-color-dark;
-  border-bottom: $arrow-width solid $grey-color-dark;
+  border-left: $arrow-thickness solid $grey-color-dark;
+  border-bottom: $arrow-thickness solid $grey-color-dark;
   margin: 0 auto;
   margin-top: $arrow-offset;
   @include browser-prefix(transform, rotate(-45deg));
