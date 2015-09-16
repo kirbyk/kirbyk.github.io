@@ -124,42 +124,29 @@ pre > code {
   display: table-cell;
   vertical-align: middle; }
 
-#arrow {
+.arrow {
   display: block;
   text-align: center;
   position: relative;
   bottom: 8em; }
 
-#arrow:before {
+.arrow:after {
   content: "";
   display: block;
-  height: 0.25em;
+  height: 1em;
   width: 1em;
-  background-color: black;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: relative;
+  border-left: 0.5em solid #000;
+  border-bottom: 0.5em solid #000;
   margin: 0 auto;
-  top: 3em; }
-
-#arrow:after {
-  content: "";
-  display: block;
-  height: 0.25em;
-  width: 1em;
-  background-color: black;
+  margin-top: 0.7em;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  position: relative;
-  margin: 0 auto;
-  top: 1.75em;
-  left: 0.375em; }
+  transform: rotate(-45deg); }
+
+.arrow:hover:after {
+  border-color: #8FACC0; }
 
 .home-main {
   padding: 50px 0; }

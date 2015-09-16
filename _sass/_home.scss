@@ -37,36 +37,27 @@
   vertical-align: middle;
 }
 
-#arrow {
+.arrow {
   display: block;
   text-align: center;
   position: relative;
   bottom: $arrow-padding;
 }
 
-#arrow:before {
+.arrow:after {
   content: "";
   display: block;
-  height: $arrow-height;
-  width: $arrow-height * 4;
-  background-color: black;
-  @include browser-prefix(transform, rotate(45deg));
-  position: relative;
+  height: $arrow-size;
+  width: $arrow-size;
+  border-left: $arrow-width solid #000;
+  border-bottom: $arrow-width solid #000;
   margin: 0 auto;
-  top: 0 + $arrow-offset;
+  margin-top: $arrow-offset;
+  @include browser-prefix(transform, rotate(-45deg));
 }
 
-#arrow:after {
-  content: "";
-  display: block;
-  height: $arrow-height;
-  width: $arrow-height * 4;
-  background-color: black;
-  @include browser-prefix(transform, rotate(-45deg));
-  position: relative;
-  margin: 0 auto;
-  top: $arrow-height * -5 + $arrow-offset;
-  left: $arrow-height * 3 / 2;
+.arrow:hover:after {
+  border-color: $brand-color;
 }
 
 .home-main {
