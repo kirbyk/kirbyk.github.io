@@ -90,6 +90,9 @@ pre > code {
   -ms-animation: fadein 2s;
   -o-animation: fadein 2s;
   animation: fadein 2s; }
+  @media (max-height: 480px) {
+    .homepage-wrapper {
+      font-size: .8em; } }
 
 @keyframes fadein {
   from {
@@ -125,6 +128,12 @@ pre > code {
   vertical-align: middle;
   position: relative;
   bottom: 3em; }
+  @media (max-width: 480px) {
+    .home-header-content {
+      bottom: 1.5em; } }
+  @media (max-height: 480px) {
+    .home-header-content {
+      bottom: 1em; } }
 
 .arrow {
   display: block;
@@ -137,6 +146,9 @@ pre > code {
   @media (max-width: 480px) {
     .arrow {
       bottom: 1.5em; } }
+  @media (max-height: 480px) {
+    .arrow {
+      bottom: 1em; } }
 
 .arrow:after {
   content: "";

@@ -64,6 +64,12 @@ $phone-width: 480px;
   }
 }
 
+@mixin landscape-phone {
+  @media (max-height: #{$phone-width}) {
+    @content;
+  }
+}
+
 @import
   "../bower_components/normalize-css/normalize.css",
   "fonts",
