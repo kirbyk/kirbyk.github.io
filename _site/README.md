@@ -1,4 +1,4 @@
 kirby.xyz
 =========
 
-Yeah, this is my site.
+This is my personal website/blog.

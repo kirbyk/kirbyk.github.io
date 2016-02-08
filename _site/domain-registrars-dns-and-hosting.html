@@ -72,8 +72,8 @@ I use CloudFlare is because <a href="https://blog.cloudflare.com/never-deal-with
 
 <p>Hosting a website can also be quite a pain. If you just need to host a static
 website, then there is <a href="https://google.com/search?q=free+static+website+hosting">no reason</a> you need to pay for hosting. My
-personal favorite solution is <a href="https://pages.github.com/">GitHub Pages</a>. I already use <code>git</code> to
-manage my website, so GitHub Pages makes updating my website as easy as <code>git push</code>.
+personal favorite solution is <a href="https://pages.github.com/">GitHub Pages</a>. I already use <code class="highlighter-rouge">git</code> to
+manage my website, so GitHub Pages makes updating my website as easy as <code class="highlighter-rouge">git push</code>.
 No more FTP, SSH, or any other three letter acroynms.</p>
 
 <h3 id="setting-it-up">Setting it up</h3>
@@ -112,14 +112,15 @@ takes a few minutes.</p>
 where username is your username on GitHub. From here you can push your static
 website up with the following commands:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># from your website directory on your local machine</span>
-<span class="nv">$ </span>git init
-<span class="nv">$ </span>git add .
-<span class="nv">$ </span>git commit -m <span class="s1">&#39;Initial commit&#39;</span>
-<span class="nv">$ </span>git remote add origin &lt;your-remote-url&gt; <span class="c"># replace &quot;&lt;your-remote-url&gt;&quot; with the one you get from your repo page on GitHub</span>
-<span class="nv">$ </span>git push -u origin master</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  
+<span class="c"># from your website directory on your local machine</span>
+<span class="gp">$ </span>git init
+<span class="gp">$ </span>git add .
+<span class="gp">$ </span>git commit -m <span class="s1">'Initial commit'</span>
+<span class="gp">$ </span>git remote add origin &lt;your-remote-url&gt; <span class="c"># replace "&lt;your-remote-url&gt;" with the one you get from your repo page on GitHub</span>
+<span class="gp">$ </span>git push -u origin master</code></pre></figure>
 
-<p>If you don’t want to spend time messing with <code>git</code>, then you can click “Settings”
+<p>If you don’t want to spend time messing with <code class="highlighter-rouge">git</code>, then you can click “Settings”
 on the right-hand side of your repo and then click “Launch automatic page
 generator” to setup a beautiful one page website.</p>
 
@@ -144,11 +145,12 @@ this by adding another CNAME record with first value “www” and second value
 this by adding a file called “CNAME” to the root directory of our website’s
 repository on GitHub. To do this run the following commands:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># from your website directory on your local machine</span>
-<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;&lt;your-domain&gt;&quot;</span> &gt;&gt; CNAME <span class="c"># where &quot;&lt;your-domain&gt;&quot; is your domain</span>
-<span class="nv">$ </span>git add CNAME
-<span class="nv">$ </span>git commit -m <span class="s1">&#39;Add CNAME&#39;</span>
-<span class="nv">$ </span>git push origin master</code></pre></div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  
+<span class="c"># from your website directory on your local machine</span>
+<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"&lt;your-domain&gt;"</span> &gt;&gt; CNAME <span class="c"># where "&lt;your-domain&gt;" is your domain</span>
+<span class="gp">$ </span>git add CNAME
+<span class="gp">$ </span>git commit -m <span class="s1">'Add CNAME'</span>
+<span class="gp">$ </span>git push origin master</code></pre></figure>
 
 
     </article>
