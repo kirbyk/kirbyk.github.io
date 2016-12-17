@@ -22,6 +22,8 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: $base-font-size * 1.5;
+  letter-spacing: 5px;
+  margin-bottom: 35px;
 }
 
 code {
@@ -55,4 +57,13 @@ pre > code {
   right: 0;
   bottom: 0;
   border-bottom: $divider-thickness solid $divider-color;
+}
+
+p {
+  text-align: left;
+}
+
+.social {
+  text-align: center;
+  margin-top: 35px;
 }

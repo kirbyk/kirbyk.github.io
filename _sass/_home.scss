@@ -2,7 +2,7 @@
   @include browser-prefix(animation, fadein $home-fadein-speed);
 
   @include landscape-phone {
-    font-size: .8em;
+    font-size: 18px;
   }
 }
 
@@ -34,6 +34,7 @@
 .home-header {
   display: table;
   height: 100vh;
+  margin: 0 auto;
 }
 
 .home-header-content {
@@ -41,6 +42,11 @@
   vertical-align: middle;
   position: relative;
   bottom: $arrow-padding;
+
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+  }
 
   @include phone {
     bottom: $arrow-padding / 2;
