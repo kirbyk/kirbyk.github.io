@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/kirbyk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://kirby.xyz
+  * I am kirbyk (https://keybase.io/kirbyk) on keybase.
+  * I have a public key with fingerprint 1D01 A6B1 F357 BD41 4A6A  CDC0 0083 ACCB 3879 6BC0
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101465dd75f8045b73d2d5505d7aafb52f4a19d60c0bd47fb9ae3111100137cab0d0a",
+            "fingerprint": "1d01a6b1f357bd414a6acdc00083accb38796bc0",
+            "host": "keybase.io",
+            "key_id": "0083accb38796bc0",
+            "kid": "0101465dd75f8045b73d2d5505d7aafb52f4a19d60c0bd47fb9ae3111100137cab0d0a",
+            "uid": "941d5a33e4d3525d34968c9ba12b4119",
+            "username": "kirbyk"
+        },
+        "service": {
+            "hostname": "kirby.xyz",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1469019782,
+    "expire_in": 157680000,
+    "prev": "8e03f093eec34a1db50fc823ebd2f5afe876a15c62ac68cb7b1b4177b8dcefde",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMIhAnicrVJbSFRBGN4tN1IyK4iC7oduhNTMOWfOZekhqBAkLDKSyNrmdvS0tmc7
+e9zcVCwpu4mVkpjVgyhWKPViZEVhYVFtREQXhC4QPRTYxW4EBTXHCoJem5dh/vm+
+b77vY/qzRwaygh2D99/nZHTmB9NXG8sDRQeTdZUScVhKCldKUT688TLGE14kajMp
+LAEIoKohxnRkGUBFRFeYzBACiOkYWwTJloqhyTRAAWGqbhETcwWKBQBUdIoJYABL
+uZJlx0q4G3ftmCdkIQMQawRaCtIFDapYw5RRAIChYEqJYuimRigQxFIn4TOEOYIT
+fKHtiJk4RH7Z+xf/n32XD8uZKmQIKwpXmYJkxBTV1AxqEgxlokJo+sAEd2N4C/e9
+2i5JRaXqXEnMkjblfq1+jr/vF1aktgta3HU8hzplYlzqefFE2Kd5qbiP28ZJ5LdC
+hNgxJioUjCR3E7YTk8JQIKln+5IiqwmgqRtyrsQr4rbLI7aPQLpmiFKB/w5PCkmD
+A8UCpsI5VUQBjCBgUUNWOGGyhbDFDV3DEFFNxlQkJDqBIqCuE4NRbjEu+Zm2xhwp
+jIRNXCIkE3ZJDHvlLpeqr/UVZwSCWYFRoRH+1wpkZY778+Emdo4O7D7VP2Hc1JbQ
+0OaqCvlkQXN/JPPp4nDH2G/BDz2zT583Wqc15jWfaft2/1VPwZSc7TWPLy7rz75Q
+87G3/fDV3trAtKFL09t+PPMWDb0tLivEq1OPozcym9AA6D62tEvrabr+OnR87s26
+on21e8Y0ZCvp1nNfLq38vnHNjfmdR5ZfLFu1oWPjA3PwR2jXPRqaMPOM8/RWtXZn
+yof0jty89oElpTOa3jR2Hy54onV11Kw/MP7Q/qrou3DepLU7rwVf9AaU7+k57q0r
+n84mzlnw0cSsE0fB2s318woLC84f6pqc/TVNTvYVzmI7b+dfbh0kKx5+vttyuWFB
+/cCO05Wb9iZfNq17Xrn4J50dQ+M=
+=JFwl
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kirbyk
+
+==================================================================
