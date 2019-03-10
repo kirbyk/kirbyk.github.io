@@ -83,30 +83,30 @@ but there can be small implementation details that still make connecting the
 dots difficult. Here are all the steps you need to follow in order to utilize
 the above services:</p>
 
-<h4 id="get-your-domain-on-namecheap">1. Get your domain on Namecheap.</h4>
+<h4 id="1-get-your-domain-on-namecheap">1. Get your domain on Namecheap.</h4>
 
 <p>It doesn’t matter if you buy it directly or transfer it, but get your domain on
 Namecheap.</p>
 
-<h4 id="add-your-site-to-cloudflare">2. Add your site to CloudFlare.</h4>
+<h4 id="2-add-your-site-to-cloudflare">2. Add your site to CloudFlare.</h4>
 
 <p>On CloudFlare add your site, scan the current DNS records, and select the free
 plan. Once you’ve done that, you’ll be prompted with two nameserver addresses.
 Save these for the next step.</p>
 
-<h4 id="point-namecheap-to-cloudflare">3. Point Namecheap to CloudFlare.</h4>
+<h4 id="3-point-namecheap-to-cloudflare">3. Point Namecheap to CloudFlare.</h4>
 
 <p>Go back to Namecheap, click “Manage Domains” from the dropdown on the top-left,
 select your domain, and then click “Transfer DNS to Webhost.” From here, enter
 the two nameservers you got from CloudFlare and click save.</p>
 
-<h4 id="check-the-nameservers">4. Check the nameservers.</h4>
+<h4 id="4-check-the-nameservers">4. Check the nameservers.</h4>
 
 <p>Awesome, now go back to your site on CloudFlare and click “Recheck Nameservers.”
 This can take up to 24 hours, but often (especially with Namecheap) it only
 takes a few minutes.</p>
 
-<h4 id="setup-github-pages">5. Setup GitHub Pages.</h4>
+<h4 id="5-setup-github-pages">5. Setup GitHub Pages.</h4>
 
 <p>Head over to GitHub and create a <a href="https://github.com/new">new repo</a> called <em>username</em>.github.io,
 where username is your username on GitHub. From here you can push your static
@@ -114,17 +114,17 @@ website up with the following commands:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  
 <span class="c"># from your website directory on your local machine</span>
-<span class="gp">$ </span>git init
-<span class="gp">$ </span>git add .
-<span class="gp">$ </span>git commit -m <span class="s1">'Initial commit'</span>
-<span class="gp">$ </span>git remote add origin &lt;your-remote-url&gt; <span class="c"># replace "&lt;your-remote-url&gt;" with the one you get from your repo page on GitHub</span>
-<span class="gp">$ </span>git push -u origin master</code></pre></figure>
+<span class="nv">$ </span>git init
+<span class="nv">$ </span>git add <span class="nb">.</span>
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s1">'Initial commit'</span>
+<span class="nv">$ </span>git remote add origin &lt;your-remote-url&gt; <span class="c"># replace "&lt;your-remote-url&gt;" with the one you get from your repo page on GitHub</span>
+<span class="nv">$ </span>git push <span class="nt">-u</span> origin master</code></pre></figure>
 
 <p>If you don’t want to spend time messing with <code class="highlighter-rouge">git</code>, then you can click “Settings”
 on the right-hand side of your repo and then click “Launch automatic page
 generator” to setup a beautiful one page website.</p>
 
-<h4 id="point-your-dns-to-github-pages">6. Point your DNS to GitHub Pages.</h4>
+<h4 id="6-point-your-dns-to-github-pages">6. Point your DNS to GitHub Pages.</h4>
 
 <p>You can now go back to your site on CloudFlare and click “DNS” at the top. From
 here you’re going to want to add a CNAME record. The first value (name) will be
@@ -139,7 +139,7 @@ suggest you backup your DNS records by clicking, “Advanced” and “Export.�
 this by adding another CNAME record with first value “www” and second value 
 <em>username</em>.github.io, where username is your username on GitHub.</p>
 
-<h4 id="add-a-cname-file-on-github">7. Add a CNAME file on GitHub.</h4>
+<h4 id="7-add-a-cname-file-on-github">7. Add a CNAME file on GitHub.</h4>
 
 <p>The last step in this process is to tell GitHub Pages about our domain. We do
 this by adding a file called “CNAME” to the root directory of our website’s
@@ -147,10 +147,10 @@ repository on GitHub. To do this run the following commands:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">  
 <span class="c"># from your website directory on your local machine</span>
-<span class="gp">$ </span><span class="nb">echo</span> <span class="s2">"&lt;your-domain&gt;"</span> &gt;&gt; CNAME <span class="c"># where "&lt;your-domain&gt;" is your domain</span>
-<span class="gp">$ </span>git add CNAME
-<span class="gp">$ </span>git commit -m <span class="s1">'Add CNAME'</span>
-<span class="gp">$ </span>git push origin master</code></pre></figure>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s2">"&lt;your-domain&gt;"</span> <span class="o">&gt;&gt;</span> CNAME <span class="c"># where "&lt;your-domain&gt;" is your domain</span>
+<span class="nv">$ </span>git add CNAME
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s1">'Add CNAME'</span>
+<span class="nv">$ </span>git push origin master</code></pre></figure>
 
 
     </article>
@@ -159,7 +159,7 @@ repository on GitHub. To do this run the following commands:</p>
   <div class='post-footer'>
     <h4 class='post-author'>Kirby Kohlmorgen</h4>
     <div class='small-bio'>
-      Product Manager at <a href='https://twitter.com/MongoDB' target='_blank'>@MongoDB</a>. I love gold toe socks.
+      Product Manager at <a href='https://www.hyperscience.com/' target='_blank'>HyperScience</a>. I love fancy cocktails.
       <br />
       Follow me on Twitter <a href='https://twitter.com/_kirbyk' target='_blank'>here</a>.
     </div>
